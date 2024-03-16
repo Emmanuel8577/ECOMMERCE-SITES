@@ -138,6 +138,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
-
-PAYSTACK_SECRET_KEY = "sk_test_fd231123aa6f8403feadb8a3cb710d0c5dfe1a78"
-PAYSTACK_PUBLIC_KEY = "pk_test_082adf54b7a5a1f8f0f43f1247dc06670be5aafe"
