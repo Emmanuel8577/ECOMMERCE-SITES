@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7ski#@+$)g@@j9#ca-(q4yp9ses364^mbp(6@&v&z8g^zm46j4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.new.sh', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -125,7 +125,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_REDIRECT_URL = '/profile/'
@@ -138,3 +142,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
+
+PAYSTACK_SECRET_KEY = "sk_test_fd231123aa6f8403feadb8a3cb710d0c5dfe1a78"
+PAYSTACK_PUBLIC_KEY = "pk_test_082adf54b7a5a1f8f0f43f1247dc06670be5aafe"
