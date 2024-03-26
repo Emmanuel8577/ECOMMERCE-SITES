@@ -4,7 +4,6 @@ from django.db import models
 from django.db import models
 from django.contrib.auth.models import User
 import secrets
-from .paystack import Paystack
 # Create your models here.
 
 CATEGORY_CHOICES ={
@@ -128,18 +127,6 @@ class Payment(models.Model):
     def amount_value(self):
         return int(self.amount) * 100
     
-
-
-    def verify_payment(self):
-        paystack = Paystack()
-        status, result = paystack.verify_payment(self.ref, self.amount)
-        if status:
-            if result['amount']/ 100 == self.amount:
-                self.save()
-        if self.verified:
-            return True
-        else:
-            return False
         
     
 STATUS_CHOICES ={
