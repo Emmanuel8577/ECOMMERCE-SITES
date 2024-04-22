@@ -12,9 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
-import django_heroku
-import dj_database_url
-from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +26,7 @@ SECRET_KEY = 'django-insecure-7ski#@+$)g@@j9#ca-(q4yp9ses364^mbp(6@&v&z8g^zm46j4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.new.sh', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -149,4 +147,3 @@ PAYSTACK_SECRET_KEY = "sk_test_fd231123aa6f8403feadb8a3cb710d0c5dfe1a78"
 PAYSTACK_PUBLIC_KEY = "pk_test_082adf54b7a5a1f8f0f43f1247dc06670be5aafe"
 
 
-django_heroku.settings(locals())

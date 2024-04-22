@@ -88,7 +88,7 @@ class ProductDetail(View):
         return render (request, 'app/product-detail.html', locals())
     
 
-@method_decorator(login_required, name='dispatch')
+
 class CustormerRegistration(View):
     def get(self, request):
         form = CustomerRegistrationForm()
