@@ -120,22 +120,25 @@
     </div>
  </div>
  <div class="container1">
-    <div class="contact-form">
-        <h1 style="font-family: sans-serif;">Contact Us</h1>
+    <div class="contact-form" style="font-family: sans-serif; color: black;">
+        <h1>Contact Us</h1>
         <form action="" method="post">
             {% csrf_token %}
             <div class="form-group">
                 <label for="name">Your Name</label>
-                <input type="text" class="form-control h-5" id="name" name="name" required>
+                <input type="text" class="form-control h-5" id="name" name="name" placeholder="Surname first" required>
             </div>
+            <br>
             <div class="form-group">
-                <label for="email" >Your Email</label>
-                <input type="email" class="form-control h-5" id="email" name="email" required>
+                <label for="email" >Your Email Address</label>
+                <input type="email" class="form-control h-5" id="email" name="email" placeholder="Enter your active Email here" required>
             </div>
+            <br>
             <div class="form-group">
                 <label for="message">Your Message</label>
-                <textarea class="form-control h-5" id="message" name="message" rows="4" style="font-size: 18px;" required></textarea>
+                <textarea class="form-control h-5" id="message" name="message" rows="4" style="font-size: 18px;" placeholder="Enter your message here" required></textarea>
             </div>
+            <br>
             <button type="submit" class="btn btn-primary btn-block" >Submit</button>
         </form>
     </div>
